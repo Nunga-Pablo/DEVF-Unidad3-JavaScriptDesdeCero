@@ -29,6 +29,6 @@ class Libro
 
 const miLibro = new Libro("Hamlet", "William Shakespeare", 1600, "disponible", [1,2,3,4,5]);
 
-miLibro.describirLibro();
+miLibro.describirLibro(); 
 miLibro.agregarCapitulo(6);
 console.log(miLibro.capitulos);
