@@ -1,0 +1,33 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+ul 
+{
+    list-style: none;
+}
+
+li
+{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.container
+{
+    background-color: gray;    
+}
+
