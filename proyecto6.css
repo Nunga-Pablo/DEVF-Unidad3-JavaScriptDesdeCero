@@ -12,25 +12,59 @@ body
     align-items: center;
     font-size: 15px;
     font-family: "Noto Sans", sans-serif;
-    background-color:darkcyan;
+    background-color: #ff7f29;
+}
+
+h1
+{
+    background-color: #f2f2f2;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.formulario
+{
+    background-color:#f2f2f2;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+input
+{
+    background-color: #e1e1e1;
+}
+
+textarea
+{
+    background-color: #e1e1e1;
+}
+
+#boton
+{
+    border-radius: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px;
+    margin-left: 100px; 
 }
 
 ul 
 {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
 }
 
 li
 {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    background-color:azure;
-    align-content: center;
-    align-items: center;
+    background-color:#c9c9c9;
+    border-radius: 10px;    
     margin-bottom: 10px;
-    padding: 10%;
+    padding: 5px;
+    min-width: 250px;
+    max-width: 300px;
 }
-

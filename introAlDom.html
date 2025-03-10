@@ -6,9 +6,45 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Titulo</h1>
+    <h1 id="miTitulo">Titulo</h1>
 
+    <p id="miParrafo">Prueba de edición de parrafo</p>
+
+    <p id="parrafoAEliminar">Prueba de parrafo a eliminar</p>
+
+    <section class="formulario">
+        <h2>Prueba de formulario</h2>
+        <form id='miFormulario' action="/enviar">
+            <p>Escribe tu nombre: <input id='nombre' type="text"> </p> 
+            <label for="comentarios" required>Comentarios: </label>
+            <textarea id="papa" required></textarea> <br> <br>
+
+            <!-- >button>Enviar</button> -->
+            <input type="submit" value="Enviar">
+
+            <p id="mensaje"></p>
+    </section>
+
+    <section class="botonColor">
+        <h2>Botón cambia color</h2>
+        <button id="cambiarColor">Cambiar Color</button>
+    </section>
+
+    <!-- Mostrar contenido oculto-->
+
+    <h2>Mostrar contenido oculto</h2>    
+    <button id="mostrarOcultar">Mostrar contenido</button>
+
+    <div id="contenido" style="display: none;">
+        <p>Este es un contenido oculto.</p>
+    </div>
+
+    <!-- Mostrar mensaje cuando el usuario pase el mouse sobre un texto-->   
+    <h2>Mostrar mensaje cuando el usuario pase el mouse sobre un texto</h2>
+
+    <p id="mensaje2">Pasa el mouse por aquí</p>
+    
     <!-- Enlazando JS con HTML-->
-    <script src=introAlDom.js"></script>
+    <script src="introAlDom.js"></script>
 </body>
 </html>

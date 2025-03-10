@@ -1,48 +1,47 @@
 document.addEventListener('DOMContentLoaded', iniciarApp);
-/* DOMContentLoader:   */
-
-/* addEventListener:   */
-
 
 function iniciarApp()
 {
-    const comentarioInput = document.getElementById('comentario');
-    const agregarButton = document.getElementById('agregar');
-    const listaComentarios = document.getElementById('lista-comentarios');
+    const nombreInput = document.getElementById("nombre");
+    const correoInput = document.getElementById("correo");
+    const comentarioInput = document.getElementById("comentario");
+    const boton = document.getElementById("boton");
+    const listaComentarios = document.getElementById("listaComentarios");
 
-/* getElementByID:  */
-    let comentarios = []; // Arreglo de productos
+    let comentariosArray = []; 
 
-    agregarButton.addEventListener('click', function()
-        {
-        agregarProducto(comentarios, comentarioInput, listaComentarios);
-        });
+    boton.addEventListener("click", function()
+    {
+        agregarComentario(comentariosArray, comentarioInput, nombreInput, correoInput,listaComentarios);
+    });
 }
 
-function agregarProducto(comentarios, comentarioInput, listaComentarios)
+function agregarComentario(comentariosArray, comentarioInput, nombreInput, correoInput, listaComentarios)
 {
     const comentario = comentarioInput.value.trim();
+    const nombre = nombreInput.value.trim();
+    const correo = correoInput.value.trim();
+
     if(comentario)
     {
-        const Nuevocomentario = 
+        const nuevoComentario = 
         {
-            nombre: comentario,
-            comprado: false
+            nombre: nombre,
+            correo: correo,
+            texto: comentario,
         };
 
-        comentarios.push(Nuevocomentario);
-        mostrarProductos(Nuevocomentario, listaComentarios);
-        comentarioInput.value = '';
+        comentariosArray.push(nuevoComentario);
+        mostrarComentarios(nuevoComentario, listaComentarios);
+        comentarioInput.value = "";
+        nombreInput.value = "";
+        correoInput.value = "";
     }
 }
 
-/* value:  */
-/* trim():  */
-/* appendChild:  */
-
-function mostrarProductos(comentario, listaComentarios)
+function mostrarComentarios(comentario, listaComentarios)
 {
     const nuevoComent = document.createElement('li');
-    nuevoComent.textContent = comentario.nombre;
+    nuevoComent.textContent = comentario.nombre + " " + comentario.correo + " : " + comentario.texto;
     listaComentarios.appendChild(nuevoComent);
 }
