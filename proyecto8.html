@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proyecto8.css">
+    <title>Proyecto 8</title>
+</head>
+<body>
+    <h1>Red social</h1>
+
+    <section class="formulario">
+        <form id="form">
+            <label class="nombre">Nombre: </label>
+            <input id="nombre" type="text" required/>  
+            <br> <br>
+            <label>Email: </label>
+            <input id="correo" type="email" required/>
+            <br> <br>
+            <label>Comentario: </label>
+            <textarea id="comentario" required></textarea>
+            <br> <br>
+            <input id="boton" type="submit" value="Enviar" />
+        </form>
+    </section>
+
+    <section class="comentarios">
+        <ul id="listaComentarios">
+        </ul>
+    </section>
+
+    <!-- Enlazando JS con HTML-->
+    <script src="proyecto8.js"></script>
+</body>
+</html>
